@@ -33,7 +33,7 @@ transition: all 0.3s ease;
 .navbar{
 background: rgba(255,255,255,0.8) !important;
 backdrop-filter: blur(12px);
-border-bottom: 1px solid var(--border);
+
 }
 
 .navbar.scrolled{
@@ -104,33 +104,7 @@ font-weight:600;
 color:var(--subtext);
 }
 
-/* BOTÕES */
-.btn-primary{
-background:var(--primary);
-border:none;
-border-radius:12px;
-}
 
-.btn-primary:hover{
-background:var(--primary-dark);
-transform:translateY(-2px);
-box-shadow:0 6px 15px rgba(46,124,255,0.3);
-}
-
-.btn-primary:active{
-transform:scale(0.95);
-}
-
-.btn-outline-light{
-border:1px solid var(--primary);
-color:var(--primary);
-border-radius:12px;
-}
-
-.btn-outline-light:hover{
-background:var(--primary);
-color:white;
-}
 
 /* CARDS */
 .card-custom{
@@ -145,6 +119,8 @@ overflow:hidden;
 transform:translateY(-8px) scale(1.02);
 box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
+
+
 
 /* DARK HOVER */
 .dark-mode .card-custom:hover{
@@ -180,34 +156,7 @@ border-radius:12px;
 margin-bottom:10px;
 }
 
-/* PROGRESS */
-.progress{
-height:10px;
-border-radius:20px;
-background:#eaeaea;
-}
 
-.progress-bar{
-background:var(--primary);
-}
-
-/* FOOTER */
-footer{
-background:#f5f5f5;
-color:#666;
-}
-
-/* ANIMAÇÃO */
-.fade-in{
-opacity:0;
-transform:translateY(30px);
-transition:0.8s;
-}
-
-.fade-in.show{
-opacity:1;
-transform:translateY(0);
-}   
 
 /* BOTÃO */
 #themeBtn{
@@ -256,3 +205,288 @@ transform:scale(4);
 opacity:0;
 }
 }
+
+/*botão - começar*/
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-glass-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+
+    padding: 10px 22px;
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER (efeito vidro mais forte) */
+.btn-glass:hover,
+.btn-glass-outline:hover {
+    transform: translateY(-2px);
+    background: rgba(46, 124, 255, 0.25); /* azul suave */
+    border-color: rgba(46, 124, 255, 0.7);
+    box-shadow: 
+        0 8px 25px rgba(46, 124, 255, 0.3),
+        0 0 10px rgba(46, 124, 255, 0.4);
+
+}
+
+/* CLIQUE */
+.btn-glass:active,
+.btn-glass-outline:active {
+    transform: scale(0.96);
+}
+
+/* SOMBRA SUAVE */
+.btn-glass:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* DARK MODE (fica ainda mais bonito) */
+.dark-mode .btn-glass {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .btn-glass-outline {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* LINHA DO LADO DO ÍCONE*/
+.linha {
+    height: 1px;
+    width: 80px;
+    background-color: #ccc;
+    background: linear-gradient(to right, transparent, #999, transparent);
+    
+}
+
+section .d-flex img {
+    width: 100px;       /* diminui o tamanho da imagem */
+    margin-top: -20px;  /* sobe a imagem 20px */
+}
+
+/* Efeito azul minimalista */
+.hacker-text {
+    font-size: 14px;                     /* tamanho do texto */
+    font-family: 'Poppins', sans-serif;
+    color: #00bfff;                      /* azul neon */
+    letter-spacing: 1px;
+    border-right: 2px solid #00bfff;     /* cursor discreto */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;                             /* inicia sem largura */
+    animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 52%; }
+}
+
+/* Cursor piscando */
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;      /* tamanho do título */
+    font-weight: bold;    /* bold */
+    color: #ffffff;       /* azul clean */
+    letter-spacing: 1px;  /* espaçamento minimalista */
+}
+
+/* Efeito Glass + Hover Animado para Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 5px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(212, 160, 58, 0.7); /* leve glow dourado */
+}
+
+/* Imagens dentro do card com contorno seguindo o PNG */
+.card-img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* mantém leve arredondamento, opcional */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+
+    /* sombra que segue o formato da imagem */
+    filter: drop-shadow(0 0 3px #d4a03a) drop-shadow(0 0 12px #d4a03a);
+}
+
+.card-img:hover {
+    transform: scale(1.1) rotate(-2deg);
+    
+    /* sombra mais intensa no hover */
+    filter: drop-shadow(0 0 5px #d4a03a) drop-shadow(0 0 10px #d5ac5a);
+}
+
+/* Títulos */
+.card h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+    
+}
+
+/* Parágrafos */
+.card p {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* Seção títulos */
+.section-title {
+    color: #d4a03a;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #d4a03a;
+    margin-bottom: 40px;
+}
+/* PODIUM */
+.ranking {
+    color: white;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+/* Cartões do podium */
+.podium .rank-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover efeito leve */
+.podium .rank-card:hover {
+    transform: translateY(-20px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(255,255,255,0.25);
+}
+
+/* Alturas do podium */
+.podium .first { height: 360px; width: 200px; }
+.podium .second { height: 280px; width: 180px; }
+.podium .third { height: 260px; width: 170px; }
+
+/* Medalhas */
+.rank-badge {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+.rank-badge.gold { background: linear-gradient(135deg, #FFD700, #FFB700); }
+.rank-badge.silver { background: linear-gradient(135deg, #C0C0C0, #AAAAAA); }
+.rank-badge.bronze { background: linear-gradient(135deg, #CD7F32, #B56B28); }
+
+/* Imagem do jogador com efeitos */
+.rank-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+    border: 4px solid rgba(255,255,255,0.35);
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+/* Efeito especial para o 1º lugar */
+.first-img {
+    border: 5px solid #FFD700;
+    box-shadow: 0 0 25px #FFD700;
+    animation: bounce 2s infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Nome e XP */
+.rank-card h4 { margin-top: 15px; margin-bottom: 5px; font-weight: 700; font-size: 1.3rem; }
+.rank-card p { margin: 0; font-size: 1rem; color: rgba(255,255,255,0.8); }
+
+/* Sparkles para o 1º lugar */
+.sparkles {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('img/sparkles.png') center/cover no-repeat;
+    animation: sparkleAnim 2s infinite linear;
+}
+
+/* Animação leve de brilho */
+@keyframes sparkleAnim {
+    0% { opacity: 0.5; transform: rotate(0deg) scale(1); }
+    50% { opacity: 1; transform: rotate(10deg) scale(1.05); }
+    100% { opacity: 0.5; transform: rotate(0deg) scale(1); }
+}
+
+/* Base do podium tipo pedestal */
+.podium .first::after,
+.podium .second::after,
+.podium .third::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    height: 25px;
+    border-radius: 12px 12px 0 0;
+}
+
+.podium .first::after { background: #FFD700; }
+.podium .second::after { background: #C0C0C0; }
+.podium .third::after { background: #CD7F32; }
