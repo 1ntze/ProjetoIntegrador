@@ -85,6 +85,17 @@ body:not(.dark-mode) .btn-glass-outline {
     border: 1px solid #1c2a72;      /* borda azul clara */
 }
 
+body:not(.dark-mode) .titulo-como-funciona {
+    color: #0a1b6e;
+}
+
+body:not(.dark-mode) .titulo-atv {
+    color: #0a1b6e;
+}
+/* LIGHT MODE - apenas este b específico */
+body:not(.dark-mode) .top-jogadores {
+    color: #0a1b6e;
+}
 /* Hover  */
 body:not(.dark-mode) .btn-glass:hover {
     background: #021053; /* azul mais claro/moderado */
@@ -101,7 +112,7 @@ body:not(.dark-mode) .btn-glass-outline:active {
 }
  /* LIGHT MODE - fundo da página azul clarinho */
 body:not(.dark-mode) {
-    background: #e0f0ff;  
+    background: #e0f0ff;  /* azul clarinho */
     color: #1a1a1a;       
 }
 
