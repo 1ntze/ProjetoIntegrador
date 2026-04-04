@@ -488,5 +488,21 @@ section .d-flex img {
 }
 
 .podium .first::after { background: #FFD700; }
-.podium .second::after { background: #C0C0C0; }
+.podium .second::after { background: #bba528; }
 .podium .third::after { background: #CD7F32; }
+
+.logo-gold {
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* contorno seguindo o PNG */
+    filter: drop-shadow(0 0 2px #d4a03a)
+            drop-shadow(0 0 6px rgba(212, 160, 58, 0.6));
+}
+
+.logo-gold:hover {
+    transform: scale(1.05);
+
+    /* leve destaque no hover */
+    filter: drop-shadow(0 0 4px #d4a03a)
+            drop-shadow(0 0 8px rgba(213, 172, 90, 0.7));
+}
