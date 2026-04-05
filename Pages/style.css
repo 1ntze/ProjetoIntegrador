@@ -945,3 +945,36 @@ section .d-flex img {
             drop-shadow(0 0 35px var(--primary));
     transform: scale(1.1) rotate(-2deg);
 }
+:root {
+    /* Light mode */
+    --btn-text: #ffffff; /* texto do botão claro */
+}
+
+.dark-mode {
+    --btn-text: #ffffff; /* texto do botão também claro */
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #1c2a72, #3a4edb);
+    color: var(--btn-text); /* garante texto claro */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, #3a4edb, #1c2a72);
+    color: var(--btn-text); /* mantém o texto branco */
+}
+
+.btn-custom:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: var(--btn-text);
+}
