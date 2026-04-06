@@ -159,8 +159,8 @@ body:not(.dark-mode) .hero {
 }
 
 /* DARK MODE - borda apenas em cima e embaixo */
-body.dark-mode .card-custom,
-body.dark-mode .podium .rank-card,
+body.dark-mode 
+body.dark-mode 
 body.dark-mode .hero {
     border-top: 1px solid #3a5ed4;    /* borda superior dourada */
     border-bottom: 1px solid #3a5ed4; /* borda inferior dourada */
@@ -170,6 +170,41 @@ body.dark-mode .hero {
     padding: 15px;                     /* mantém espaçamento */
 }
 
+body.dark-mode .hero {
+    position: relative;
+    padding: 15px;
+    border: none;
+}
+
+/* linha de cima */
+body.dark-mode .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* linha de baixo */
+body.dark-mode .hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
 /* BASE */
 body{
 font-family:'Poppins', sans-serif;
@@ -977,4 +1012,61 @@ section .d-flex img {
     transform: translateY(1px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     color: var(--btn-text);
+}
+
+
+
+.titulo-efeito {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    position: relative;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* linha */
+.titulo-efeito::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(90deg, #1c2a72, #3a4edb, #ffd700, #ffea00);
+    background-size: 200%;
+
+    animation: moverGradiente 4s ease-in-out infinite alternate;
+}
+
+/* brilho dentro da linha */
+.titulo-efeito::after::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+    animation: brilhoLinha 2s linear infinite;
+}
+
+/* animações */
+@keyframes moverGradiente {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes brilhoLinha {
+    0% { left: -50%; }
+    100% { left: 100%; }
 }
