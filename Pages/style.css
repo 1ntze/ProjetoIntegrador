@@ -1070,3 +1070,18 @@ section .d-flex img {
     0% { left: -50%; }
     100% { left: 100%; }
 }
+
+.logo-energia {
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* brilho bem leve (glass) */
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* hover opcional bem clean */
+.logo-energia:hover {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+    transform: scale(1.03);
+}
