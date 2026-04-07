@@ -926,21 +926,8 @@ section .d-flex img {
     transform: scale(1.2) translateY(-5px);
 }
 
-/* STATUS ONLINE */
-.status {
-    color: #00c851;
-    font-size: 0.9rem;
-}
-.status .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #00c851;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-    box-shadow: 0 0 10px #00c851;
-    animation: pulse 1.5s infinite;
-}
+
+
 @keyframes pulse {
     0% { transform: scale(1); opacity:1; }
     50% { transform: scale(1.5); opacity:0.6; }
@@ -1013,7 +1000,6 @@ section .d-flex img {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     color: var(--btn-text);
 }
-
 
 
 .titulo-efeito {
